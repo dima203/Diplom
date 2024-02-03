@@ -4,31 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1a7e67a-f99c-4188-a8d0-db440f3ee182" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/Diplom.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/webserver/api/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/webserver/api/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/webserver/api/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/webserver/api/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/webserver/api/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/webserver/api/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/webserver/api/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/webserver/api/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/webserver/manage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/webserver/webserver/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/webserver/webserver/asgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/webserver/webserver/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/webserver/webserver/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/webserver/webserver/wsgi.py" afterDir="false" />
+    <list default="true" id="f1a7e67a-f99c-4188-a8d0-db440f3ee182" name="Changes" comment="add readme">
+      <change afterPath="$PROJECT_DIR$/web/webserver/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/webserver/api/tests/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/webserver/api/tests/test_resource_type.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/webserver/api/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/webserver/webserver/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/webserver/webserver/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,12 +20,16 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Python Unit Test" />
         <option value="Python Script" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
@@ -54,17 +40,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Shell Script.run server.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/DjangoWebApp&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python tests.Python tests for api.testts.TestResourceType.test_resource_type_creation.executor": "Run",
+    "Python tests.Python tests for test_resource_type.TestResourceType.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Shell Script.run server.executor": "Run",
+    "Shell Script.tests.executor": "Run",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "E:/Univer/Диплом/Diplom/web/webserver",
+    "settings.editor.selected.configurable": "discord-project"
   }
-}</component>
-  <component name="RunManager">
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Univer\Диплом\Diplom\web\webserver\api" />
+      <recent name="E:\Univer\Диплом\Diplom\web\webserver" />
+      <recent name="E:\Univer\Диплом\Diplom\web\webserver\api\tests" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Shell Script.tests">
     <configuration name="run server" type="ShConfigurationType">
       <option name="SCRIPT_TEXT" value="python manage.py runserver" />
       <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
@@ -80,6 +76,25 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="tests" type="ShConfigurationType">
+      <option name="SCRIPT_TEXT" value="python manage.py test --parallel auto -v 2" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="false" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$/web/webserver" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="powershell.exe" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="false" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Shell Script.tests" />
+      <item itemvalue="Shell Script.run server" />
+    </list>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -97,6 +112,28 @@
       <option name="presentableId" value="Default" />
       <updated>1706963122251</updated>
     </task>
+    <task id="LOCAL-00001" summary="init">
+      <option name="closed" value="true" />
+      <created>1706977593534</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1706977593534</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add readme">
+      <option name="closed" value="true" />
+      <created>1706977788156</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1706977788156</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init" />
+    <MESSAGE value="add readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="add readme" />
   </component>
 </project>
