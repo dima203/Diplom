@@ -1,0 +1,30 @@
+{% load static %}
+
+{% include 'material/includes/material_css.html' %}
+{% include 'material/includes/material_js.html' %}
+
+{% load material_form %}
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    {% block links %}
+    {% endblock %}
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/background.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/menu.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/form.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/theme.css' %}">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body class="body">
+    <div class="main_box">
+        <div class="content_box">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+    {% block popups %}
+    {% endblock %}
+</body>
+</html>
