@@ -1,7 +1,7 @@
 from django.contrib.auth.models import User
 from rest_framework import serializers
 
-from .models import ResourceStorage, ResourceType
+from .models import ResourceStorage, ResourceType, Transaction
 
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
@@ -13,10 +13,16 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
 class StorageSerializer(serializers.ModelSerializer):
     class Meta:
         model = ResourceStorage
-        fields = ['name', 'resource_type', 'resource_count']
+        fields = ['pk', 'name', 'resource_type', 'resource_count']
 
 
 class ResourceTypeSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = ResourceType
-        fields = ['name']
+        fields = ['pk', 'name']
+
+
+class TransactionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Transaction
+        fields = ['pk', 'storage_id', 'resource_count']

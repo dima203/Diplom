@@ -10,6 +10,7 @@ from . import views
 router = routers.DefaultRouter()
 router.register(r'resource_types', views.ResourceTypeViewSet, basename='resource_type')
 router.register(r'storages', views.StorageViewSet, basename='storage')
+router.register(r'transactions', views.TransactionViewSet, basename='transaction')
 
 urlpatterns = [
     path('', include(router.urls)),
