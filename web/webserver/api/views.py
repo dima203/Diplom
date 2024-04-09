@@ -1,11 +1,11 @@
 from django.http import HttpResponse
 from django.contrib.auth.models import User
 
-from .serializers import UserSerializer
-
 from rest_framework import permissions, viewsets
-from rest_framework.decorators import permission_classes, api_view
-from rest_framework.permissions import IsAuthenticated, IsAdminUser
+from rest_framework_simplejwt.tokens import AccessToken
+
+from .models import ResourceStorage, ResourceType
+from .serializers import UserSerializer, StorageSerializer, ResourceTypeSerializer
 
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -14,7 +14,17 @@ class UserViewSet(viewsets.ModelViewSet):
     permission_classes = [permissions.IsAuthenticated]
 
 
-@permission_classes((IsAuthenticated, IsAdminUser))
-@api_view(['GET'])
-def index(request):
-    return HttpResponse("Hello, world. You're at the polls index.")
+class StorageViewSet(viewsets.ModelViewSet):
+    serializer_class = StorageSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get_queryset(self):
+        return ResourceStorage.objects.filter(user_id=self.request.user.pk)
+
+
+class ResourceTypeViewSet(viewsets.ModelViewSet):
+    serializer_class = ResourceTypeSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get_queryset(self):
+        return ResourceType.objects.filter(user_id=self.request.user.pk)
