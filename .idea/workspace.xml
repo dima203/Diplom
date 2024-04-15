@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1a7e67a-f99c-4188-a8d0-db440f3ee182" name="Changes" comment="add token authorization">
+    <list default="true" id="f1a7e67a-f99c-4188-a8d0-db440f3ee182" name="Changes" comment="add transaction view">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/webserver/api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/webserver/api/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/webserver/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/webserver/api/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/webserver/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/webserver/api/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/webserver/webserver/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/webserver/webserver/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +28,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;dima203&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/dima203/Diplom.git&quot;,
+    &quot;accountId&quot;: &quot;453d257d-010d-42c0-9bc7-78daf91ca9c6&quot;
+  }
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -128,7 +141,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-d68999036c7f-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.14475.56" />
+        <option value="bundled-python-sdk-0509580d9d50-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.14494.241" />
       </set>
     </attachedChunks>
   </component>
@@ -181,7 +194,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712689135135</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add transaction view">
+      <option name="closed" value="true" />
+      <created>1712693738763</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1712693738763</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -190,6 +211,7 @@
     <MESSAGE value="add tests" />
     <MESSAGE value="add storage and transaction models" />
     <MESSAGE value="add token authorization" />
-    <option name="LAST_COMMIT_MESSAGE" value="add token authorization" />
+    <MESSAGE value="add transaction view" />
+    <option name="LAST_COMMIT_MESSAGE" value="add transaction view" />
   </component>
 </project>

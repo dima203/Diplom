@@ -11,18 +11,22 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
 
 
 class StorageSerializer(serializers.ModelSerializer):
+    def create(self, validated_data):
+        print(validated_data)
+        return ResourceStorage.objects.create(**validated_data)
+
     class Meta:
         model = ResourceStorage
-        fields = ['pk', 'name', 'resource_type', 'resource_count']
+        fields = ['pk', 'user_id', 'name', 'resource_type', 'resource_count']
 
 
-class ResourceTypeSerializer(serializers.HyperlinkedModelSerializer):
+class ResourceTypeSerializer(serializers.ModelSerializer):
     class Meta:
         model = ResourceType
-        fields = ['pk', 'name']
+        fields = ['pk', 'user_id', 'name']
 
 
 class TransactionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Transaction
-        fields = ['pk', 'storage_id', 'resource_count']
+        fields = ['pk', 'user_id', 'storage_id', 'resource_count']
