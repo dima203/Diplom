@@ -12,7 +12,6 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
 
 class StorageSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
-        print(validated_data)
         return ResourceStorage.objects.create(**validated_data)
 
     class Meta:
