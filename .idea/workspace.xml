@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1a7e67a-f99c-4188-a8d0-db440f3ee182" name="Changes" comment="add local connections available">
+    <list default="true" id="f1a7e67a-f99c-4188-a8d0-db440f3ee182" name="Changes" comment="fix urls">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/webserver/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/webserver/api/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/webserver/api/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/webserver/api/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/webserver/api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/webserver/api/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/webserver/webserver/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/webserver/webserver/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,7 +217,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713224288262</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="fix urls">
+      <option name="closed" value="true" />
+      <created>1713303617020</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1713303617020</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -227,6 +237,7 @@
     <MESSAGE value="add transaction view" />
     <MESSAGE value="add all models update, delete and add view" />
     <MESSAGE value="add local connections available" />
-    <option name="LAST_COMMIT_MESSAGE" value="add local connections available" />
+    <MESSAGE value="fix urls" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix urls" />
   </component>
 </project>

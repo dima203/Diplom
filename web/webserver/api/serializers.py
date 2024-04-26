@@ -29,4 +29,4 @@ class ResourceTypeSerializer(serializers.ModelSerializer):
 class TransactionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Transaction
-        fields = ['pk', 'user_id', 'storage_id', 'resource_count']
+        fields = ['pk', 'user_id', 'storage_id', 'resource_count', 'time_stamp']

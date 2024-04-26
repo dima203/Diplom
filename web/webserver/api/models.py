@@ -1,3 +1,4 @@
+import django.utils.timezone
 from django.db import models
 from django.contrib.auth.models import User
 from model_utils import FieldTracker
@@ -30,6 +31,7 @@ class Transaction(models.Model):
     user_id = models.ForeignKey(User, on_delete=models.CASCADE)
     storage_id = models.ForeignKey(ResourceStorage, on_delete=models.CASCADE)
     resource_count = models.FloatField(default=0)
+    time_stamp = models.DateTimeField(default=django.utils.timezone.now)
     tracker = FieldTracker(fields=('resource_count',))
 
     @tracker
