@@ -16,16 +16,16 @@ class StorageSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = ResourceStorage
-        fields = ['pk', 'user_id', 'name', 'resource_type', 'resource_count']
+        fields = ['pk', 'user_id', 'name', 'resource_type', 'resource_count', 'last_update']
 
 
 class ResourceTypeSerializer(serializers.ModelSerializer):
     class Meta:
         model = ResourceType
-        fields = ['pk', 'user_id', 'name']
+        fields = ['pk', 'user_id', 'name', 'last_update']
 
 
 class TransactionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Transaction
-        fields = ['pk', 'user_id', 'storage_id', 'resource_count', 'time_stamp']
+        fields = ['pk', 'user_id', 'storage_id', 'resource_count', 'time_stamp', 'last_update']

@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1a7e67a-f99c-4188-a8d0-db440f3ee182" name="Changes" comment="add time stamp">
+    <list default="true" id="f1a7e67a-f99c-4188-a8d0-db440f3ee182" name="Changes" comment="delete debug code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/webserver/api/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/webserver/api/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/webserver/api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/webserver/api/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/webserver/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/webserver/api/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/webserver/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/webserver/api/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +64,7 @@
     &quot;Shell Script.tests.executor&quot;: &quot;Run&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;last_opened_file_path&quot;: &quot;E:/PyCharmProjects/RoleBot&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;discord-project&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -138,7 +141,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-0509580d9d50-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.14494.241" />
+        <option value="bundled-python-sdk-babbdf50b680-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.15989.155" />
       </set>
     </attachedChunks>
   </component>
@@ -231,7 +234,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714162114038</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="delete debug code">
+      <option name="closed" value="true" />
+      <created>1714168408684</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1714168408684</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -245,6 +256,7 @@
     <MESSAGE value="add local connections available" />
     <MESSAGE value="fix urls" />
     <MESSAGE value="add time stamp" />
-    <option name="LAST_COMMIT_MESSAGE" value="add time stamp" />
+    <MESSAGE value="delete debug code" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete debug code" />
   </component>
 </project>

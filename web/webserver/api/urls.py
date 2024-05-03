@@ -7,6 +7,7 @@ from . import views
 
 
 urlpatterns = [
+    path(r'ping', views.PingView.as_view(), name='ping'),
     path(r'resource_types', views.ResourceTypeViewSet.as_view(), name='resource_type'),
     path(r'resource_types/<int:pk>', views.ResourceTypeDetail.as_view(), name='resource_type_detail'),
     path(r'storages', views.StorageViewSet.as_view(), name='storage'),
