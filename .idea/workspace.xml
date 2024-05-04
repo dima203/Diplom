@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1a7e67a-f99c-4188-a8d0-db440f3ee182" name="Changes" comment="delete debug code">
+    <list default="true" id="f1a7e67a-f99c-4188-a8d0-db440f3ee182" name="Changes" comment="add last update time for sync">
+      <change afterPath="$PROJECT_DIR$/web/webserver/static/change_log.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/webserver/api/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/webserver/api/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/webserver/api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/webserver/api/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/webserver/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/webserver/api/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/webserver/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/webserver/api/views.py" afterDir="false" />
     </list>
@@ -242,7 +242,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714168408684</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="add last update time for sync">
+      <option name="closed" value="true" />
+      <created>1714774719291</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1714774719291</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -257,6 +265,7 @@
     <MESSAGE value="fix urls" />
     <MESSAGE value="add time stamp" />
     <MESSAGE value="delete debug code" />
-    <option name="LAST_COMMIT_MESSAGE" value="delete debug code" />
+    <MESSAGE value="add last update time for sync" />
+    <option name="LAST_COMMIT_MESSAGE" value="add last update time for sync" />
   </component>
 </project>

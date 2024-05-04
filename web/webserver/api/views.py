@@ -5,16 +5,27 @@ from rest_framework import permissions, viewsets, generics, status, views
 from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import AccessToken
 
+import json
+
 from .models import ResourceStorage, ResourceType, Transaction
 from .serializers import UserSerializer, StorageSerializer, ResourceTypeSerializer, TransactionSerializer
 
 
 class PingView(views.APIView):
-    def get(self, request, format=None):
+    def get(self, request, format=None) -> Response:
         data = {
             'status': 'ok',
         }
         return Response(data)
+
+
+class ChangeLog(views.APIView):
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get(self, request, format=None) -> Response:
+        with open('static/change_log.json', 'r') as file:
+            data = json.load(file)
+            return Response(data[str(request.user.pk)])
 
 
 class UserViewSet(viewsets.ModelViewSet):

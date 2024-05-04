@@ -8,6 +8,8 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 from rest_framework.authtoken.models import Token
 
+import json
+
 
 class ResourceType(models.Model):
     name = models.CharField(max_length=256)
@@ -16,6 +18,10 @@ class ResourceType(models.Model):
 
     def save(self, *args, **kwargs) -> None:
         self.last_update = django.utils.timezone.now()
+        write_change_log(str(self.user_id.pk), 'update', 'resource', django.utils.timezone.now(), {
+            'pk': self.pk,
+            'name': self.name
+        })
         super().save(*args, **kwargs)
 
     def __str__(self) -> str:
@@ -31,6 +37,12 @@ class ResourceStorage(models.Model):
 
     def save(self, *args, **kwargs) -> None:
         self.last_update = django.utils.timezone.now()
+        write_change_log(str(self.user_id.pk), 'update', 'storage', django.utils.timezone.now(), {
+            'pk': self.pk,
+            'name': self.name,
+            'resource_count': self.resource_count,
+            'resource_type': self.resource_type.pk
+        })
         super().save(*args, **kwargs)
 
     def __str__(self) -> str:
@@ -50,6 +62,12 @@ class Transaction(models.Model):
         if self.pk:
             self.storage_id.resource_count -= self.tracker.previous('resource_count')
         self.last_update = django.utils.timezone.now()
+        write_change_log(str(self.user_id.pk), 'update', 'transaction', django.utils.timezone.now(), {
+            'pk': self.pk,
+            'storage_id': self.storage_id.pk,
+            'resource_count': self.resource_count,
+            'time_stamp': self.time_stamp.isoformat()
+        })
         super().save(*args, **kwargs)
         self.storage_id.resource_count += self.resource_count
         self.storage_id.save()
@@ -60,6 +78,12 @@ class Transaction(models.Model):
 
 @receiver(pre_delete, sender=Transaction)
 def on_transaction_deleted(sender, instance, using, **kwargs):
+    write_change_log(str(instance.user_id.pk), 'delete', 'transaction', django.utils.timezone.now(), {
+        'pk': instance.pk,
+        'storage_id': instance.storage_id.pk,
+        'resource_count': instance.resource_count,
+        'time_stamp': instance.time_stamp.isoformat()
+    })
     storage = ResourceStorage.objects.get(pk=instance.storage_id.pk)
     storage.resource_count -= instance.resource_count
     storage.save()
@@ -69,3 +93,16 @@ def on_transaction_deleted(sender, instance, using, **kwargs):
 def create_auth_token(sender, instance=None, created=False, **kwargs):
     if created:
         Token.objects.create(user=instance)
+
+
+def write_change_log(user_pk: str, operation_type: str, object_type: str, time_stamp: django.utils.timezone.datetime, operation_data: dict) -> None:
+    with open('static/change_log.json', 'r') as file:
+        data = json.load(file)
+    data[user_pk].append({
+        'operation_type': operation_type,
+        'object_type': object_type,
+        'time_stamp': time_stamp.isoformat(),
+        'data': operation_data
+    })
+    with open('static/change_log.json', 'w') as file:
+        json.dump(data, file, indent=2)
