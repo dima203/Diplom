@@ -69,9 +69,18 @@ class ResourceTypeDetail(generics.RetrieveUpdateDestroyAPIView):
 class TransactionViewSet(generics.ListCreateAPIView):
     serializer_class = TransactionSerializer
     permission_classes = [permissions.IsAuthenticated]
+    ordering = ('-time_stamp')
 
     def get_queryset(self):
         return Transaction.objects.filter(user_id=self.request.user.pk)
+
+    def post(self, request, *args, **kwargs):
+        temp = request.data.copy()
+        temp['user_id'] = request.user.pk
+        serializer = self.serializer_class(data=temp)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response(serializer.data)
 
 
 class TransactionDetail(generics.RetrieveUpdateDestroyAPIView):

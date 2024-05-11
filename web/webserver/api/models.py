@@ -62,13 +62,13 @@ class Transaction(models.Model):
         if self.pk:
             self.storage_id.resource_count -= self.tracker.previous('resource_count')
         self.last_update = django.utils.timezone.now()
+        super().save(*args, **kwargs)
         write_change_log(str(self.user_id.pk), 'update', 'transaction', django.utils.timezone.now(), {
             'pk': self.pk,
             'storage_id': self.storage_id.pk,
             'resource_count': self.resource_count,
             'time_stamp': self.time_stamp.isoformat()
         })
-        super().save(*args, **kwargs)
         self.storage_id.resource_count += self.resource_count
         self.storage_id.save()
 
